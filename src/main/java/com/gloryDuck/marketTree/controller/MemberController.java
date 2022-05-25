@@ -1277,10 +1277,10 @@ public class MemberController {
             	  member.setSnsLoginKakaoName(nick);
             	  member.setSmsFlag(myInfo.getSmsFlag());
             	  member.setMailFlag(myInfo.getMailFlag());
-            	  member.setGpisServiceTerms(myInfo.getGpisServiceTerms());
-            	  member.setGpisFinancialTerms(myInfo.getGpisFinancialTerms());
-            	  member.setGpisInformationCollection(myInfo.getGpisInformationCollection());
-            	  member.setGpisInformationMarketing(myInfo.getGpisInformationMarketing());
+            	  member.setMarketServiceTerms(myInfo.getMarketServiceTerms());
+            	  member.setMarketFinancialTerms(myInfo.getMarketFinancialTerms());
+            	  member.setMarketInformationCollection(myInfo.getMarketInformationCollection());
+            	  member.setMarketInformationMarketing(myInfo.getMarketInformationMarketing());
             	  try {
 					backedLoginService.save(member,request,response);
 					 
@@ -1438,10 +1438,10 @@ public class MemberController {
                 	  member.setSnsLoginNaverName(nick);
                 	  member.setSmsFlag(myInfo.getSmsFlag());
                 	  member.setMailFlag(myInfo.getMailFlag());
-                	  member.setGpisServiceTerms(myInfo.getGpisServiceTerms());
-                	  member.setGpisFinancialTerms(myInfo.getGpisFinancialTerms());
-                	  member.setGpisInformationCollection(myInfo.getGpisInformationCollection());
-                	  member.setGpisInformationMarketing(myInfo.getGpisInformationMarketing());
+                	  member.setMarketServiceTerms(myInfo.getMarketServiceTerms());
+                	  member.setMarketFinancialTerms(myInfo.getMarketFinancialTerms());
+                	  member.setMarketInformationCollection(myInfo.getMarketInformationCollection());
+                	  member.setMarketInformationMarketing(myInfo.getMarketInformationMarketing());
                 	  try {
       					backedLoginService.save(member,request,response);
       					 

@@ -156,7 +156,7 @@
                   <div class="form-head"><span class="form-name __required">이름 </span></div>
                   <div class="form-body">
                     <div class="form-area type-a">
-                    <input type="text" readonly name="user_name" id="user_name" maxlength="20" placeholder="본인 인증을 진행해 주세요" value="">
+                    <input type="text" name="user_name" id="user_name" maxlength="20" placeholder="본인 인증을 진행해 주세요" value="">
                     <input type="hidden" name="only_param" id="only_param" value="">
                     <input type="hidden" name="auth_type" id="auth_type" value="">
                     <input type="hidden" name="birth" id="birth" value="">
@@ -179,7 +179,7 @@
                       <option>019</option>
                       <option>070</option>
                       <option>0503</option>
-                    </select> <input type="number" readonly name="cellphone" id="cellphone" maxlength="8" oninput="maxLengthCheck(this)" placeholder="본인 인증시 자동으로 입력됩니다" value=""></div>
+                    </select> <input type="number" name="cellphone" id="cellphone" maxlength="8" oninput="maxLengthCheck(this)" placeholder="본인 인증시 자동으로 입력됩니다" value=""></div>
                     <div class="form-noti cellphone_noti_0">올바른 번호가 아닙니다.</div>
                     <div class="form-noti cellphone_noti_1">이미 등록된 번호입니다.</div>
                     <div class="form-noti cellphone_noti_2">사용가능한 번호입니다.</div>
@@ -225,10 +225,10 @@
               				</div>
               				<div class="option-body">
                         <ul>
-                          <li><input type="checkbox" id="gpisServiceTerms" name="chk" value="N"> <label for="gpisServiceTerms">골든플랫폼 이용약관(필수) </label> </li>
-                          <li><input type="checkbox" id="gpisFinancialTerms" name="chk" value="N"> <label for="gpisFinancialTerms">전자금융거래 이용약관(필수)</label> </li>
-                          <li><input type="checkbox" id="gpisInformationCollection" name="chk" value="N"> <label for="gpisInformationCollection">개인정보 수집 및 이용(필수)</label> </li>
-                          <li><input type="checkbox" id="gpisInformationMarketing" name="chk" value="N"> <label for="gpisInformationMarketing">개인정보 활용 및 마케팅 정보 수신 동의(선택)</label> </li>
+                          <li><input type="checkbox" id="marketServiceTerms" name="chk" value="N"> <label for="marketServiceTerms">골든플랫폼 이용약관(필수) </label> </li>
+                          <li><input type="checkbox" id="marketFinancialTerms" name="chk" value="N"> <label for="marketFinancialTerms">전자금융거래 이용약관(필수)</label> </li>
+                          <li><input type="checkbox" id="marketInformationCollection" name="chk" value="N"> <label for="marketInformationCollection">개인정보 수집 및 이용(필수)</label> </li>
+                          <li><input type="checkbox" id="marketInformationMarketing" name="chk" value="N"> <label for="marketInformationMarketing">개인정보 활용 및 마케팅 정보 수신 동의(선택)</label> </li>
                         </ul>
               				</div>
               			</div>
@@ -274,18 +274,18 @@
 			if($("#chkAll").is(":checked") == false) {
 				$("input[name=chkAll]").prop("checked", true);
 				$("input[name=chk]").prop("checked", true);
-				$('#gpisServiceTerms').val("Y"); 
-				$('#gpisFinancialTerms').val("Y"); 
-				$('#gpisInformationCollection').val("Y"); 
-				$('#gpisInformationMarketing').val("Y"); 
+				$('#marketServiceTerms').val("Y"); 
+				$('#marketFinancialTerms').val("Y"); 
+				$('#marketInformationCollection').val("Y"); 
+				$('#marketInformationMarketing').val("Y"); 
 
 			}else{
 				$("input[name=chkAll]").prop("checked", false);
 				$("input[name=chk]").prop("checked", false);
-				$('#gpisServiceTerms').val("N"); 
-				$('#gpisFinancialTerms').val("N"); 
-				$('#gpisInformationCollection').val("N"); 
-				$('#gpisInformationMarketing').val("N"); 
+				$('#marketServiceTerms').val("N"); 
+				$('#marketFinancialTerms').val("N"); 
+				$('#marketInformationCollection').val("N"); 
+				$('#marketInformationMarketing').val("N"); 
 			}
 			
 		});
@@ -299,32 +299,32 @@
 		});
 
   	
-  	$("#gpisServiceTerms").click(function() {
-  		if ($('#gpisServiceTerms').is(':checked')) {
-  				$('#gpisServiceTerms').val("Y"); 
+  	$("#marketServiceTerms").click(function() {
+  		if ($('#marketServiceTerms').is(':checked')) {
+  				$('#marketServiceTerms').val("Y"); 
   		} else { 
-  				$('#gpisServiceTerms').val("N"); 
+  				$('#marketServiceTerms').val("N"); 
   		} 
   	});
-  	$("#gpisFinancialTerms").click(function() {
-  		if ($('#gpisFinancialTerms').is(':checked')) {
-  				$('#gpisFinancialTerms').val("Y"); 
+  	$("#marketFinancialTerms").click(function() {
+  		if ($('#marketFinancialTerms').is(':checked')) {
+  				$('#marketFinancialTerms').val("Y"); 
   		} else { 
-  				$('#gpisFinancialTerms').val("N"); 
+  				$('#marketFinancialTerms').val("N"); 
   		} 
   	});
-  	$("#gpisInformationCollection").click(function() {
-  		if ($('#gpisInformationCollection').is(':checked')) {
-  				$('#gpisInformationCollection').val("Y"); 
+  	$("#marketInformationCollection").click(function() {
+  		if ($('#marketInformationCollection').is(':checked')) {
+  				$('#marketInformationCollection').val("Y"); 
   		} else { 
-  				$('#gpisInformationCollection').val("N"); 
+  				$('#marketInformationCollection').val("N"); 
   		} 
   	});
-  	$("#gpisInformationMarketing").click(function() {
-  		if ($('#gpisInformationMarketing').is(':checked')) {
-  				$('#gpisInformationMarketing').val("Y"); 
+  	$("#marketInformationMarketing").click(function() {
+  		if ($('#marketInformationMarketing').is(':checked')) {
+  				$('#marketInformationMarketing').val("Y"); 
   		} else { 
-  				$('#gpisInformationMarketing').val("N"); 
+  				$('#marketInformationMarketing').val("N"); 
   		} 
   	});
   	
@@ -363,14 +363,14 @@
     		return;
     	}
     	
-    	var gpisServiceTerms = $('#gpisServiceTerms').val(), //필수 선택
-    		gpisFinancialTerms = $('#gpisFinancialTerms').val(), //필수 선택 / 전자 금융거래
-    		gpisInformationCollection = $('#gpisInformationCollection').val(), //필수 선택 / 개인정보 수집
-    		gpisInformationMarketing = $('#gpisInformationMarketing').val(); //선택 / 개인정보 활용 sms 등 
+    	var marketServiceTerms = $('#marketServiceTerms').val(), //필수 선택
+    		marketFinancialTerms = $('#marketFinancialTerms').val(), //필수 선택 / 전자 금융거래
+    		marketInformationCollection = $('#marketInformationCollection').val(), //필수 선택 / 개인정보 수집
+    		marketInformationMarketing = $('#marketInformationMarketing').val(); //선택 / 개인정보 활용 sms 등 
     		
     	
     	
-    	if(gpisServiceTerms == 'N' || gpisFinancialTerms == 'N' || gpisInformationCollection == 'N' ){
+    	if(marketServiceTerms == 'N' || marketFinancialTerms == 'N' || marketInformationCollection == 'N' ){
     			$('.option-list').attr('style', 'animation-duration: 0.1s; animation-name: slidein; animation-iteration-count:2; animation-direction: alternate;');
     			//$('.option-list').attr('style', 'animation-play-state : running');
     			$('.terms_noti_0').attr('style', 'display:block !important; color:red');
@@ -421,12 +421,12 @@
 						    	   	'telNo' : phone ,
 						    	   	'cellNo' : phone ,
 						    	   	'snsOnly' : 'N' ,
-						    		'smsFlag' : gpisInformationMarketing ,
-						    		'mailFlag' : gpisInformationMarketing,
-						    		'gpisServiceTerms' : gpisServiceTerms,
-						    		'gpisFinancialTerms' : gpisFinancialTerms,
-						    		'gpisInformationCollection' : gpisInformationCollection,
-						    		'gpisInformationMarketing' : gpisInformationMarketing,
+						    		'smsFlag' : marketInformationMarketing ,
+						    		'mailFlag' : marketInformationMarketing,
+						    		'marketServiceTerms' : marketServiceTerms,
+						    		'marketFinancialTerms' : marketFinancialTerms,
+						    		'marketInformationCollection' : marketInformationCollection,
+						    		'marketInformationMarketing' : marketInformationMarketing,
 						    		'onlyParam' : only_param,
 						    		'authType' : auth_type,
 						    		'birth' : birth,

@@ -16,7 +16,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "gpis_user")
+@Table(name = "market_user")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 public @Data class MemberEntity implements Serializable {
@@ -102,9 +102,6 @@ public @Data class MemberEntity implements Serializable {
     
     //##################### 추가로 사이트 운영시 필요한 정보 ########################
     
-    @Column(length = 7, nullable = true, name="quotation_option")
-    private String quotationOption;//견적맞춤조건 ABCDEFG...
-    
     @Column(nullable = true, name="isenabled")
     private Integer isEnabled;//계정 사용 가능여부
     
@@ -169,26 +166,26 @@ public @Data class MemberEntity implements Serializable {
     
     //#############################################################################################
     
-    @Column(length = 20, nullable = true, name="gpis_service_terms")
-    private String gpisServiceTerms;//서비스 이용약관
+    @Column(length = 20, nullable = true, name="market_service_terms")
+    private String marketServiceTerms;//서비스 이용약관
     
     @Column(name = "service_agreed_date", nullable = true)
     private String serviceAgreedDate;//동의일자
     
-    @Column(length = 20, nullable = true, name="gpis_financial_terms")
-    private String gpisFinancialTerms;//전자금융거래 동의
+    @Column(length = 20, nullable = true, name="market_financial_terms")
+    private String marketFinancialTerms;//전자금융거래 동의
     
     @Column(name = "financial_agreed_date", nullable = true)
     private String financialAgreedDate;//동의일자
     
-    @Column(length = 20, nullable = true, name="gpis_information_collection")
-    private String gpisInformationCollection;//개인정보 수집동의
+    @Column(length = 20, nullable = true, name="market_information_collection")
+    private String marketInformationCollection;//개인정보 수집동의
     
     @Column(name = "collection_agreed_date", nullable = true)
     private String collectionAgreedDate;//동의일자
     
-    @Column(length = 20, nullable = true, name="gpis_information_marketing")
-    private String gpisInformationMarketing;//마케팅 사용동의
+    @Column(length = 20, nullable = true, name="market_information_marketing")
+    private String marketInformationMarketing;//마케팅 사용동의
     
     @Column(name = "marketing_agreed_date", nullable = true)
     private String marketingAgreedDate;//동의일자
@@ -223,13 +220,13 @@ public @Data class MemberEntity implements Serializable {
     public MemberEntity(String platformNo, String userId, String userName, String password, String email, String telNo,
 			String cellNo, String zipCode, String address, String smsFlag, String mailFlag, String platformRole,
 			String snsOnly, String snsLoginNaver, String snsLoginNaverMail, String snsLoginNaverName, String snsLoginNaverDate,
-			String snsLoginKakao, String snsLoginKakaoMail, String snsLoginKakaoName, String snsLoginKakaoDate, String quotationOption,
+			String snsLoginKakao, String snsLoginKakaoMail, String snsLoginKakaoName, String snsLoginKakaoDate, 
 			Integer isEnabled, Integer pwWrongCnt, String pwResetFlag, String pwResetDate, String addDate,
 			String lastLoginDate, String addUserId, String changeDate, String changeUserId, String status,
 			String buyerCode, String sellerCode, String userType, String confirmUserId, String confirmDate,
 			String divisionCode, String deptCode, String position, String employeeNo, String faxNo,
-			String gpisServiceTerms, String serviceAgreedDate, String gpisFinancialTerms, String financialAgreedDate,
-			String gpisInformationCollection, String collectionAgreedDate, String gpisInformationMarketing,
+			String marketServiceTerms, String serviceAgreedDate, String marketFinancialTerms, String financialAgreedDate,
+			String marketInformationCollection, String collectionAgreedDate, String marketInformationMarketing,
 			String marketingAgreedDate, String onlyParam, String authType, String birth, String mobileCo,
 			String gender) {
 		super();
@@ -254,7 +251,6 @@ public @Data class MemberEntity implements Serializable {
 		this.snsLoginKakaoMail = snsLoginKakaoMail;
 		this.snsLoginKakaoName = snsLoginKakaoName;
 		this.snsLoginKakaoDate = snsLoginKakaoDate;
-		this.quotationOption = quotationOption;
 		this.isEnabled = isEnabled;
 		this.pwWrongCnt = pwWrongCnt;
 		this.pwResetFlag = pwResetFlag;
@@ -275,13 +271,13 @@ public @Data class MemberEntity implements Serializable {
 		this.position = position;
 		this.employeeNo = employeeNo;
 		this.faxNo = faxNo;
-		this.gpisServiceTerms = gpisServiceTerms;
+		this.marketServiceTerms = marketServiceTerms;
 		this.serviceAgreedDate = serviceAgreedDate;
-		this.gpisFinancialTerms = gpisFinancialTerms;
+		this.marketFinancialTerms = marketFinancialTerms;
 		this.financialAgreedDate = financialAgreedDate;
-		this.gpisInformationCollection = gpisInformationCollection;
+		this.marketInformationCollection = marketInformationCollection;
 		this.collectionAgreedDate = collectionAgreedDate;
-		this.gpisInformationMarketing = gpisInformationMarketing;
+		this.marketInformationMarketing = marketInformationMarketing;
 		this.marketingAgreedDate = marketingAgreedDate;
 		this.onlyParam = onlyParam;
 		this.authType = authType;
