@@ -1,0 +1,78 @@
+
+
+$(document).ready(function() {
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 상단메뉴 스크롤 고정
+var nav = $('header');
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 100) {
+    nav.addClass("scroll");
+  } else {
+    nav.removeClass("scroll");
+  }
+});
+
+// 상단메뉴 검색
+$('#btn_search_o').click(function() {
+  $('#search_box').show();
+  $('#btn_search_c').show();
+  $('#btn_search_o').hide();
+});
+$('#btn_search_c').click(function() {
+  $('#search_box').hide();
+  $('#btn_search_c').hide();
+  $('#btn_search_o').show();
+});
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 상품리스트 필터
+
+$('.fl-goods_filter>ul>li').eq(0).show();
+$('.fl-goods_filter>ul>li>a').bind('click',function(){
+  r=$('.fl-goods_filter>ul>li>a').index($(this));
+  $('.fl-goods_filter>ul>li').eq(r).show();
+  $(this).parent().toggleClass('on');
+  return false;
+});
+
+
+// 상품리스트 필터
+$('.info_box>ul>li>div .btn_open').bind('click',function(){
+  r=$('.info_box>ul>li>div').index($(this));
+  $(this).parent().parent().toggleClass('on').siblings().removeClass('on');
+  return false;
+});
+
+// 상품상세 펼침
+
+$('.btn_detail_more').click(function() {
+  $('.detail-toggle_more').toggleClass('on');
+});
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+// 상단메뉴 스크롤 고정
+
+
+
+  var fixed = $('.fr-detail_price_box');
+  var fixedoffset = $('.fr-detail_price_box').offset();
+
+  $(window).scroll(function(){
+    if( $(this).scrollTop() > fixedoffset.top){
+      fixed.addClass('scroll');
+    }else {
+      fixed.removeClass('scroll');
+    }
+  });
+
+
+
+//document
+});

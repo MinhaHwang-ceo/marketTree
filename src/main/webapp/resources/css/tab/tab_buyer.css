@@ -1,0 +1,171 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>buyer - 상품관리</title>
+  <link rel="stylesheet" type="text/css" href="/resources/css/layout.css" >
+  <link rel="stylesheet" type="text/css" href="/resources/css/buyer.css">
+<!--<link rel="stylesheet" type="text/css" href="/resources/css/seller_old.css" >-->
+
+</head>
+
+<body class="mypage __buyer __buyerindex">
+  <div class="wrap">
+    <!-- S : header -->
+    <jsp:include page="/views/common/header.jsp" flush ="false"/>
+    <!-- E : header -->
+      <!-- S : body -->
+    <main>
+    <div class="container">
+      <div class="location">
+          <div class="inwrap">
+            <ul>
+              <li><i class="xi-home"></i> HOME</li>
+              <li>마이페이지</li>
+              <li>견적현황</li>
+              <li>견적상세</li>
+            </ul>
+          </div>
+        </div>
+      <div class="title">
+        <div class="inwrap">
+          <h3><span>바이어</span> 마이페이지 <em>빠르고 원활한 상담을 위하여 정확한 정보를 입력해 주세요</em></h3>
+          <!--<div class="r_btn"><a href="#">기존 견적 불러오기</a></div>-->
+        </div>
+      </div>
+      <div class="content _bggray">
+
+      <!--// seller_inwrap : START -->
+      <div class="inwrap bs_content ">
+        <!--S : lnb-->
+        <jsp:include page="/views/common/lnb_buyer.jsp" flush ="false"/>
+        <!--E : lnb-->
+        <!-- body start-->
+        <div class="buyer_body  ">
+          <h3 class="index">견적상세 </h3>
+          <!-- 상견적 현황 정보 -->
+          <div class="section">
+            <h4 class="ico_check">견적상세 <div class="fr_area"><button class="btn btn-default-o icon_doc __btn_doccheck">계약서 확인</button> <button class="btn btn-default-o icon_print __btn_docprint">견적서 출력</button></div></h4>
+            <div class="box_area">
+              <!--견적상세-->
+              <div class="box_section">
+                <div class="view_table">
+                  <dl>
+                    <dt>견적번호</dt>
+                    <dd class="colspan3">GP20210506-000001 ( 2021-05-06 14:04:13 )</dd>
+
+                    <dt>buyer</dt>
+                    <dd>아이피스 <div class="fr_area"><button class="btn btn-default-o sizeSmall  icon_chat __btn_chat">대화하기</button></div></dd>
+                    <dt>상태</dt>
+                    <dd>협의중</dd>
+
+                    <dt>상품명</dt>
+                    <dd>더블에이 A4 80g </dd>
+                    <dt>브랜드</dt>
+                    <dd>더블에이</dd>
+
+                    <dt>상품 선택정보<span>옵션 및 수량</span></dt>
+                    <dd>5box</dd>
+                    <dt>대체가능여부</dt>
+                    <dd>Y</dd>
+                    <dt>희망 납기기한</dt>
+                    <dd>Buyer와 협의</dd>
+
+                    <dt>요청사항</dt>
+                    <dd>지속 구매 예정입니다. 할인견적 요청드립니다. </dd>
+                    <dt>견적목적</dt>
+                    <dd>구매목적</dd>
+
+                    <dt> 유효기한</dt>
+                    <dd>2021.05.10 까지</dd>
+                    <dt>배송지 정보 </dt>
+                    <dd>서울특별시 중구</dd>
+                    <dt>선호옵션 </dt>
+                    <dd>일괄견적 희망 </dd>
+                  </dl>
+                  <dl>
+                    <dt>첨부파일</dt>
+                    <dd class="colspan3">2021-05-06 / GP_더블에이.xls <div class="fr_area"><button class="btn btn-default-o sizeSmall icon_down __btn_download">내려받기amily:'xeicon';}
+.buyer_menu > li.on:hover{}
+.buyer_menu > li.on{}
+.buyer_menu > li.on > a{color: #1b1b1b;padding: 18px 0px  10px;/* font-size: 1.1em; */position: relative;width: 100%;margin: 0 auto;display: block;box-sizing: border-box;font-weight: 500;}
+.buyer_menu > li.on > a:after {content: ''; font-family:'xeicon';}
+
+.buyer_menu > li > a:before{display: none;content:'';margin-right: 3px;/* width: 3px; *//* height: 3px; *//* background: #8d8d8d; */vertical-align:middle;margin-top: -5px;font-size: 18px;color: #000;}
+
+/*2depth*/
+.buyer_menu > li > ul.depth2{padding: 0px 10px 0 0;margin-top: 15px;width: 100%;box-sizing: border-box;width: 100%;margin: 0 auto;/* margin-left: 5px; */box-sizing: border-box;/* background: #f9f9f9; *//* box-sizing: border-box; */border-radius: 3px;border-top: 0px solid #dbdbdb;}
+.buyer_menu > li > ul.depth2 > li{padding-top: 10px;}
+.buyer_menu > li > ul.depth2 > li > a{padding: 0px 0 0px;font-size: 15px;color: #6e6e6e;/* font-size: 0.9rem; */font-size: 15px;}
+.buyer_menu > li > ul.depth2 > li > a:before{display:inline-block;/* content:''; */margin-right: 5px;width: 3px;height: 3px;background: #8d8d8d;vertical-align:middle;margin-top:-2px;}
+.buyer_menu > li > ul.depth2 > li > ul.depth3{margin-top: 5px;background: #f5f5f5;padding: 10px;border-top: 1px solid #dfdfdf96;/* border-right: 0px; *//* border-left: 0px; */margin-bottom: 10px;}
+.buyer_menu > li > ul.depth2 > li > ul.depth3 > li{}
+.buyer_menu > li > ul.depth2 > li > ul.depth3 > li > a{padding: 0px 0 0px;font-size: 15px;color: #4c4c4c;font-size: 14px;display: block;padding: 5px 0;}
+.buyer_menu > li > ul.depth2 > li > ul.depth3 > li > a:before{display:inline-block;content:'';margin-right: 5px;width: 3px;height: 3px;background: #8d8d8d;vertical-align:middle; margin-top:-2px}
+
+.buyer_menu > li > ul.depth2 > li.on>a{font-weight:400;color: #2f6fc5;}
+
+/**********************buyer body**********************/
+/*body 영역*/
+.buyer_body{float: right;width: calc(100% - 270px);margin-left: 250px;}
+
+/*depth3 - TAB*/
+.buyer_body .depth3_menu{}
+.buyer_body .depth3_menu ul{ width: 100%; }
+.buyer_body .depth3_menu ul:after{display:block; clear:both; content:'';}
+.buyer_body .depth3_menu ul > li{float:left;position: relative;width: calc(100%/3);box-sizing: border-box;height: 50px;}
+.buyer_body .depth3_menu ul > li:after{display:block;width:1px;height: 18px;background: #bbbaba;position:absolute;right:0;top:10px;}
+.buyer_body .depth3_menu ul > li:last-child:after,
+.buyer_body .depth3_menu ul > li.on:after{display:none; }
+.buyer_body .depth3_menu ul > li > a{display:block;padding: 16px 20px;font-size: 1.0rem;color: #0a0a0a;text-align: center;background: #cbcbcb;box-sizing: border-box;border: 1px solid #cbcbcb;border-left: 2px solid #fff;}
+.buyer_body .depth3_menu ul > li.hover > a{font-weight:600; color;#000}
+.buyer_body .depth3_menu ul > li.on{border: 0px solid #e94f16;}
+.buyer_body .depth3_menu ul > li.on > a{}
+
+.buyer_body h3:before,
+.buyer_body h4:before,
+.buyer_body h5:before,
+.buyer_body h6:before{display:inline-block; content:''; vertical-align: middle;}
+
+.buyer_body h3{}
+
+/**/
+.buyer_body h3.index{border-bottom: 1px solid #000;padding-bottom: 10px;margin-bottom:10px;}
+.buyer_body h3.index .name{color: #5464e5;}
+
+.buyer_body h4{font-size: 1.3rem !important;margin-bottom: 15px;color: #242525 !important;padding-top: 20px;padding-left: 5px;/* display: flex; */position: relative;font-weight: 400;}
+.buyer_body h4 .h4_stxt{color:#686868; font-size:15px; font-weight:400; margin-left:5px}
+.buyer_body h4>button{position:absolute;right:0px;top: 10px;border: 0px;background: none;height: auto;font-family: 'Noto Sans KR', '맑음고딕', Malgun Gothic, dotum, gulim, sans-serif;min-width: auto;padding: 0;margin-bottom: 0;}
+.buyer_body h4>button:after{font-size:12px; margin-left:5px}
+.buyer_body h4 .fr_area{position:absolute;right:0;top: 15px;}
+
+.buyer_body h5{font-size: 17px;margin-bottom: 10px;color: #282828 !important;display:inline-block;position: relative;vertical-align: middle;width: 100%;display: flex;flex-direction: row;align-items: center;}
+.buyer_body h5:before {width: 5px;height: 5px;background: #148ca7;margin-right: 5px;margin-top: -5px;display: none;}
+.buyer_body h5 .field{position: absolute;margin-left: 35px;padding: 0;right: 0;margin-right: 0;}
+.buyer_body h5 + .part04{border-top:1px solid #ababab; padding-top:5px; margin-top:5px}
+.buyer_body h5 +.field{display:inline-block;vertical-align: middle;margin-left: 15px;margin-top: -7px;}
+
+.buyer_body h5 > em{position:absolute;right: 10px;font-weight: 400;font-size: 14px;top: 0;}
+.buyer_body h5 + .swich_area{}
+
+.buyer_body h6{}
+
+
+
+/******************************************************************************
+* 메인 리스트
+******************************************************************************/
+
+
+
+.box_area .thumb{width: 190px;height: 170px;/* background: #000; */text-align: center;margin-top: 15px;}
+.box_area .thumb.__mychat:before{content:'나의 채팅문의';font-weight: 600;color: #000;font-size: 15px;}
+.box_area .thumb.__mychat:after{content:'/e0bf';position: absolute;z-index: 100;background-repeat: no-repeat;background-position:center center;font-family:'Material-Icons-TwoTone';font-size: 30px;justify-content: center;align-items: center;fill: #fff;}
+.box_area .thumb.__myqna:before{content:'나의 Q&A';font-weight: 600;color: #000;font-size: 15px;}
+.box_area .thumb.__myqna:after{content:''}

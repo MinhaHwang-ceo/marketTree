@@ -1,0 +1,136 @@
+server:
+  port: 443
+  ssl:
+   enabled: true
+#   enabled-protocols:#    - TLSv1.1
+#    - TLSv1.2
+   key-store: ayokeystore.pkcs12
+   key-store-password: 123456
+   key-password: 123456
+   trust-store: ayotrust.pkcs12
+   trust-store-password: 123456
+#   key-store: www.weconn.co.kr_jks.jks
+#   key-store-type: JKS
+#   key-store-password: weconn
+#   key-password: weconn
+  tomcat:
+    use-relative-redirects: true
+    max-http-form-post-size: 50MB
+logging:
+  level:
+    org.springframework: DEBUG
+
+spring:
+  output:
+    ansi:
+      enabled: NEVER
+#  session:
+#    store-type: redis
+#  redis:
+#    host: 127.0.0.1
+#    port: 6379
+#    password:
+#    timeout: 3600
+  security:
+    oauth2:
+      client:
+        registration:
+          kakao:
+            authorization-grant-type: authorization_code
+            client-id: c29af8a8adfc0e089b9fd1d54a273733               #iffice original  c29af8a8adfc0e089b9fd1d54a273733
+            client-secret: gZW0bIUreTCB3STiOEo45omXXd756MVk           #iffice original  gZW0bIUreTCB3STiOEo45omXXd756MVk
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+            scope:
+              - profile
+              - account_email
+            client-authentication-method: POST,GET
+            client-name: Kakao
+
+        provider:
+         
+          kakao:
+            authorization-uri: https://kauth.kakao.com/oauth/authorize
+            token-uri: https://kauth.kakao.com/oauth/token
+            user-info-uri: https://kapi.kakao.com/v2/user/me
+            user-name-attribute: id
+#FileUpload
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+#jpa setting
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        order_inserts: true
+        order_updates: true
+        jdbc:
+          batch_size: 20000
+        dialect: org.hibernate.dialect.SQLServer2008Dialect
+      generate-ddl: false
+      proc.param_null_passing: true
+      use-new-id-generator-mappings: false
+        
+ 
+      
+      
+security.filter-dispatcher-types: ASYNC, FORWARD, INCLUDE, REQUEST, ERROR
+      
+# ===================================================================
+# DataSource
+# ===================================================================
+spring.datasource.type: com.zaxxer.hikari.HikariDataSource
+spring.datasource.hikari.maximumPoolSize: 100
+spring.datasource.hikari.connectionTestQuery: SELECT 1
+spring.datasource.hikari.connectionTimeout: 30000
+spring.datasource.hikari.minimum-idle: 100
+spring.datasource.hikari.max-lifetime: 1800000
+spring.datasource.hikari.idle-timeout: 600000
+ 
+spring.datasource.tomcat.maxactive: 100
+spring.datasource.tomcat.max-idle: 100
+spring.datasource.tomcat.min-idle: 100
+spring.datasource.tomcat.test-on-borrow: true
+
+# ===================================================================
+# Hibernate
+# ===================================================================
+spring.jpa.database: sql-server
+spring.jpa.properties.javax.persistence.query.timeout: 10000
+
+# ===================================================================
+# DataSource
+# ===================================================================
+
+#spring.datasource.driver-class-name : com.microsoft.sqlserver.jdbc.SQLServerDriver
+spring.datasource.driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+#spring.datasource.url : jdbc:sqlserver://10.10.10.55:1433;databaseName=GPPLATFORM;
+spring.datasource.url : jdbc:log4jdbc:sqlserver://10.10.10.55:1433;databaseName=GPPLATFORM;rewriteBatchedStatements=true;
+spring.datasource.username : sa 
+spring.datasource.password : dhvltm^tmxhfl
+
+# ===================================================================
+# Logging
+# ===================================================================
+logging.level.org.springframework.web: info
+logging.level.org.hibernate: info
+
+
+
+# ===================================================================
+# reCaptcha
+# ===================================================================
+google:
+  recaptcha:
+    key:
+      site: 6LfAsigdAAAAAALLufXTkmFNCsvhT_EjEtlO9v5s
+      secret: 6LfAsigdAAAAAKRPLR1axRksd2RUMuUNeaY6ixYT
+      url: https://www.google.com/recaptcha/api/siteverify
+
+
+
+

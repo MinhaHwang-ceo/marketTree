@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+		<Console name="console" target="SYSTEM_OUT">
+		    <PatternLayout pattern="%d %5p [%c] %m%n" />
+		</Console>
+		<RollingFile name="file" fileName="./log/${date:yyyy}/${date:MM}/TestLog.log"
+								filePattern="./log/${date:yyyy}/${date:MM}/dailyLog_%d{yyyyMMdd}.log">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+			</Policies>
+		</RollingFile>
+    </Appenders>
+    <Loggers>
+		<Logger name="org.springframework" level="INFO" additivity="false">
+			<AppenderRef ref="console" />
+		</Logger>
+		<Root level="ERROR">
+			<AppenderRef ref="console" />
+			<AppenderRef ref="file"/>
+		</Root>
+    </Loggers>
+</Configuration>

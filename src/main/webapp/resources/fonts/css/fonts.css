@@ -1,0 +1,67 @@
+@charset "utf-8";
+@import url('/resources/fonts/css/line-awesome.min.css');
+@import url('/resources/fonts/css/all.min.css');
+/*@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 200;
+  src: url('/resources/fonts/NotoSansKR-Light.woff2') format('woff2'), url('/resources/fonts/NotoSansKR-Light.woff') format('woff'), url('/resources/fonts/NotoSansKR-Light.otf') format('opentype')
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/resources/fonts/NotoSansKR-Regular.woff2') format('woff2'), url('/resources/fonts/NotoSansKR-Regular.woff') format('woff'), url('/resources/fonts/NotoSansKR-Regular.otf') format('opentype')
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/resources/fonts/NotoSansKR-Medium.woff2') format('woff2'), url('/resources/fonts/NotoSansKR-Medium.woff') format('woff'), url('/resources/fonts/NotoSansKR-Medium.otf') format('opentype')
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: url('/resources/fonts/NotoSansKR-Bold.woff2') format('woff2'), url('/resources/fonts/NotoSansKR-Bold.woff') format('woff'), url('/resources/fonts/NotoSansKR-Bold.otf') format('opentype')
+}
+
+
+@font-face {
+	font-family: 'sc3';
+	font-style: normal;
+	font-weight: normal;
+	src: local(※),
+		url('/resources/fonts/S-CoreDream-3Light.eot'),
+		url('/resources/fonts/S-CoreDream-3Light.woff') format('woff'),
+		url('/resources/fonts/S-CoreDream-3Light.otf') format('opentype'),
+		url('/resources/fonts/S-CoreDream-3Light.eot?#iefix') format('embedded-opentype'),
+		url('/resources/fonts/S-CoreDream-3Light.woff2') format('woff2'),
+		url('/resources/fonts/S-CoreDream-3Light.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'NanumBarunGothic';
+src: url('/resources/fonts/NanumBarunGothic.eot');
+src: url('/resources/fonts/NanumBarunGothic.eot') format('embedded-opentype'),
+url('/resources/fonts/NanumBarunGothic.woff') format('woff');}
+
+
+@font-face { font-family: 'NanumGothic';
+src: url('/resources/fonts/NanumGothic.eot');
+src: url('/resources/fonts/NanumGothic.eot') format('embedded-opentype'),
+url('/resources/fonts/NanumGothic.woff') format('woff');}
+
+
+@font-face { font-family: 'NanumSquare';
+src: url('/resources/fonts/NanumSquare.eot');
+src: url('/resources/fonts/NanumSquare.eot') format('embedded-opentype'),
+url('/resources/fonts/NanumSquare.woff') format('woff');}

@@ -1,0 +1,79 @@
+@charset "utf-8";
+@import url('/resources/fonts/css/all.min.css');
+@import url('/resources/fonts/css/line-awesome.min.css');
+@import url('/resources/fonts/css/xeicon.css');
+@import url('/resources/fonts/css/xeicon104.css');
+@import url('/resources/fonts/css/fontello.css');
+@import url('/resources/fonts/css/material.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 100;
+  src: url(/resources/fonts/NotoSansKR-Thin.woff2) format('woff2'),
+       url(/resources/fonts/NotoSansKR-Thin.woff) format('woff'),
+       url(/resources/fonts/NotoSansKR-Thin.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 300;
+  src: url(/resources/fonts/NotoSansKR-Light.woff2) format('woff2'),
+       url(/resources/fonts/NotoSansKR-Light.woff) format('woff'),
+       url(/resources/fonts/NotoSansKR-Light.otf) format('opentype');
+}
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 400;
+   src: url(/resources/fonts/NotoSansKR-Regular.woff2) format('woff2'),
+        url(/resources/fonts/NotoSansKR-Regular.woff) format('woff'),
+        url(/resources/fonts/NotoSansKR-Regular.otf) format('opentype');
+ }
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 500;
+   src: url(/resources/fonts/NotoSansKR-Medium.woff2) format('woff2'),
+        url(/resources/fonts/NotoSansKR-Medium.woff) format('woff'),
+        url(/resources/fonts/NotoSansKR-Medium.otf) format('opentype');
+ }
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 700;
+   src: url(/resources/fonts/NotoSansKR-Bold.woff2) format('woff2'),
+        url(/resources/fonts/NotoSansKR-Bold.woff) format('woff'),
+        url(/resources/fonts/NotoSansKR-Bold.otf) format('opentype');
+ }
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 900;
+   src: url(/resources/fonts/NotoSansKR-Black.woff2) format('woff2'),
+        url(/resources/fonts/NotoSansKR-Black.woff) format('woff'),
+        url(/resources/fonts/NotoSansKR-Black.otf) format('opentype');
+ }
+
+
+
+
+@font-face {
+  font-family: 'NanumBarunGothic';
+  src: url('/resources/fonts/NanumBarunGothic.eot');
+  src: url('/resources/fonts/NanumBarunGothic.eot') format('embedded-opentype'),
+  url('/resources/fonts/NanumBarunGothic.woff') format('woff');}
+
+
+  @font-face { font-family: 'NanumGothic';
+  src: url('/resources/fonts/NanumGothic.eot');
+  src: url('/resources/fonts/NanumGothic.eot') format('embedded-opentype'),
+  url('/resources/fonts/NanumGothic.woff') format('woff');}
+
+
+  @font-face { font-family: 'NanumSquare';
+  src: url('/resources/fonts/NanumSquare.eot');
+  src: url('/resources/fonts/NanumSquare.eot') format('embedded-opentype'),
+  url('/resources/fonts/NanumSquare.woff') format('woff');}

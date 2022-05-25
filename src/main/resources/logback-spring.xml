@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{yyyyMMdd HH:mm:ss.SSS} [%thread] %-3level %logger{5} - %msg %n</pattern>
+    </encoder>
+  </appender>
+  
+  <property name="log" value="logs"/>
+  
+<!--   <appender name="PAY_LOG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log}/payInfo.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log}/payInfo-%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+
+        <encoder>
+            <Pattern>%d{yyyy-MM-dd HH:mm} %-5level %logger{36} - %msg%n</Pattern>
+        </encoder>
+  </appender>
+  
+  <appender name="DELY_LOG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log}/delyInfo.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log}/delyInfo-%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+
+        <encoder>
+            <Pattern>%d{yyyy-MM-dd HH:mm} %-5level %logger{36} - %msg%n</Pattern>
+        </encoder>
+  </appender> -->
+
+  <logger name="org.springframework" level="info"/>
+  <logger name="kr.or.connect" level="debug"/>
+
+  <logger name="jdbc" level="OFF"/>
+
+  <logger name="jdbc.sqlonly" level="INFO"/>
+  <logger name="jdbc.sqltiming" level="OFF"/>
+  <logger name="jdbc.audit" level="OFF"/>
+  <logger name="jdbc.resultset" level="OFF"/>
+  <logger name="jdbc.resultsettable" level="INFO"/>
+  <logger name="jdbc.connection" level="INFO"/>
+  
+<!--   <logger name="com.gloryDuck.marketTree.controller.order"  level="info" additivity="false">
+
+    <appender-ref ref="PAY_LOG_FILE" />
+
+  </logger> -->
+  
+ <!--  <logger name="com.gloryDuck.marketTree.controller.seller.sellerOrder"  level="info" additivity="false">
+
+    <appender-ref ref="DELY_LOG_FILE" />
+
+  </logger> -->
+
+  <root level="INFO">
+    <appender-ref ref="STDOUT" />
+  </root>
+  
+
+</configuration>

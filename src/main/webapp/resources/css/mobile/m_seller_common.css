@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+
+/* CSS Document */
+ul,li{list-style:none; margin:0;padding:0}
+img{border:0;vertical-align:middle;}
+#container body, div, form, feldset, input, textarea, p, td {/* FONT-SIZE: 12px; *//* line-height: 16px; *//* COLOR: #595959; */font-family:'Noto Sans KR', -apple-system, 'Helvetica Neue', Helvetica, '맑음고딕', Malgun Gothic, dotum, gulim, sans-serif;}
+/*label[for="radio"]{margin-right:25px !important;font: 300 14px 'Noto Sans KR', -apple-system, 'Helvetica Neue', Helvetica, '맑음고딕', Malgun Gothic, dotum, gulim, sans-serif;}
+label[for="select"]{margin-left:20px !important;}
+
+input[type="checkbox"]{border:1px solid #bbbbbb;width:20px;height:20px;margin-left:6px;vertical-align:middle;}
+input[type="radio"] {width: 20px; height: 17px; vertical-align:middle; margin-left:5px !important;border: 0px solid #bbbbbb; margin-left: 6px; background-color: #fff;}*/
+
+input[type="text"]{width:100%;border:1px solid #CCC;padding: 6px 10px; outline:none; box-sizing:border-box;vertical-align: middle;font: 500 14px 'Noto Sans KR', -apple-system, 'Helvetica Neue', Helvetica, '맑음고딕', Malgun Gothic, dotum, gulim, sans-serif;}
+input[type="button"]{border:1px solid #ccc; padding:5px 10px; outline:none; box-sizing:border-box; background-color: #fff;}
+input[type="file"]{border:1px solid #ccc; padding:5px 10px; outline:none; box-sizing:border-box; background-color: #fff;}
+
+input[type="password"]{width:100%;border:1px solid #CCC;padding: 6px 10px;outline:none;box-sizing:border-box;vertical-align: middle;font: 500 14px 'Noto Sans KR', -apple-system, 'Helvetica Neue', Helvetica, '맑음고딕', Malgun Gothic, dotum, gulim, sans-serif;}
+input[type="number"]{width:100%; border:1px solid #CCC;padding:5px 10px;outline:none;box-sizing:border-box;*vertical-align:text-top;font: 500 12px 'Noto Sans KR', -apple-system, 'Helvetica Neue', Helvetica, '맑음고딕', Malgun Gothic, dotum, gulim, sans-serif;}
+
+
+input::-webkit-input-placeholder{color: #b8b8b8; }
+input:-moz-placeholder{color: #b8b8b8; }
+input:-moz-placeholder{color: #b8b8b8; }
+input:-ms-input-placeholder{ color: #b8b8b8;}

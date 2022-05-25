@@ -1,0 +1,125 @@
+.axis-table-scroll {
+  overflow: hidden;
+  border: 1px #DDD solid;
+  /* width: 1024px; */
+}
+.axis-table-scroll table {
+  table-layout: fixed;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  border-collapse: collapse;
+  overflow-x: scroll;
+}
+.axis-table-scroll table > thead,
+.axis-table-scroll table > tbody {
+  display: inline-block;
+}
+.axis-table-scroll table thead {
+  border-bottom: 1px #FFF solid;
+  background: #535454;
+  background: -moz-linear-gradient(top, #1e5799 0%, #7db9e8 100%);
+  /* background: -webkit-linear-gradient(top, #1e5799 0%, #7db9e8 100%); */
+  /* background: linear-gradient(to bottom, #1e5799 0%, #7db9e8 100%); */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#1e5799", endColorstr="#7db9e8",GradientType=0 );
+}
+.axis-table-scroll table thead th {
+  /* color: #FFF; */
+  /* border-bottom: 1px; */
+}
+.axis-table-scroll table tbody {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 400px;
+  margin-top: -4px;
+}
+
+.axis-table-scroll table th {
+  height: 35px;
+  min-width: 100px;
+  padding: 0;
+  text-align: center;
+  border: 1px #898989 solid;
+  box-sizing: border-box;
+}
+
+.axis-table-scroll table td{
+  height: 35px;
+  /* min-height: 30px; */
+  min-width: 100px;
+  padding: 0;
+  text-align: center;
+  border: 1px #DDD solid;
+  box-sizing: border-box;
+  }
+
+.axis-table-scroll .table-legend {
+  box-shadow: 12px 0 20px -10px rgb(0 0 0 / 38%);
+}
+.axis-table-scroll .table-data {
+  background: #FEFEFE;
+  color: #555;
+}
+.axis-table-scroll .y-table-legend {
+  width: 440px;
+  position: absolute;
+}
+.axis-table-scroll .y-table-legend table tr th:first-child{width:35px}
+.axis-table-scroll .y-table-legend table tr td:first-child{
+    border-left: 0px;
+    width: 30px;
+    padding: 0px !important;
+}
+.axis-table-scroll .y-table-legend table tr td{padding: 0 10px !important;}
+
+.axis-table-scroll .y-table-legend th{height: 35px;}
+.axis-table-scroll .axis-table-data {
+  width: calc(100% - $legend-width);
+  margin-left: 440px;
+}
+
+/*상품일괄등록*/
+.__two_tablebloc{}
+.__two_tablebloc .y-table-legend{width:465px}
+.__two_tablebloc .axis-table-data{margin-left:465px;}
+.__two_tablebloc .axis-table-scroll table td{min-width:auto;}
+.__two_tablebloc .axis-table-scroll .axis-table-data table th,
+.__two_tablebloc .axis-table-scroll .axis-table-data table td{min-width:150px;}
+.__two_tablebloc .axis-table-scroll .y-table-legend table th{min-width:auto;}
+
+/*이미지 일괄등록*/
+.__two_tableimg {}
+.__two_tableimg .y-table-legend{ display: none; }
+.__two_tableimg .axis-table-data{margin-left: 0;}
+.__two_tableimg .axis-table-scroll table{}
+.__two_tableimg .axis-table-scroll table thead{}
+.__two_tableimg .axis-table-scroll table tbody{}
+.__two_tableimg .axis-table-scroll table td{}
+
+/*일반적인 스크롤 테이블*/
+.__one_tablebloc{}
+.__one_tablebloc .y-table-legend{ display: none; }
+.__one_tablebloc .axis-table-data{margin-left: 0;}
+.__one_tablebloc .axis-table-scroll table td{min-width:auto;}
+.__one_tablebloc .axis-table-scroll .axis-table-data table th,
+.__one_tablebloc .axis-table-scroll .axis-table-data table td{min-width:150px;}
+.__one_tablebloc .axis-table-scroll .y-table-legend table th{min-width:auto;}
+
+/**/
+.__index_tablebloc{}
+.__index_tablebloc .axis-table-scroll{border:0px;}
+.__index_tablebloc .axis-table-scroll table tbody { overflow-y: scroll; overflow-x: hidden; height: 275px; margin-top: -4px; }
+.__index_tablebloc .y-table-legend{ display: none; }
+.__index_tablebloc .axis-table-data{margin-left: 0;}
+.__index_tablebloc .axis-table-scroll table td{min-width:auto;}
+.__index_tablebloc .axis-table-scroll .axis-table-data table th,
+.__index_tablebloc .axis-table-scroll .axis-table-data table td{min-width:150px;}
+
+.__index_tablebloc02{}
+.__index_tablebloc02 .axis-table-scroll{border:0px;}
+.__index_tablebloc02 .axis-table-scroll table tbody { overflow-y: scroll; overflow-x: hidden; height: 275px; margin-top: -4px; }
+.__index_tablebloc02 .y-table-legend{ display: none; }
+.__index_tablebloc02 .axis-table-scroll .axis-table-data{margin-left: 0;  width: calc(100% - $legend-width);}
+.__index_tablebloc02 .axis-table-scroll table td{min-width:auto;}
+.__index_tablebloc02 .axis-table-scroll .axis-table-data table th,
+.__index_tablebloc02 .axis-table-scroll .axis-table-data table td{min-width:150px;}

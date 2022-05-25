@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib 
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+    version="2.1">
+
+    <display-name>Estimate Functions</display-name>
+    <tlib-version>1.0</tlib-version>
+    <short-name>Estimate</short-name>
+    <uri>org.hierax.ifdl.tags</uri>
+
+    <function>
+        <name>sortByBtosEndDate</name>
+        <function-class>org.hierax.ifdl.tags.estimate.EstimateSort</function-class>
+        <function-signature>java.util.List sortByBtosEndDate(java.util.List)</function-signature>
+    </function>
+
+    <function>
+        <name>sortByHopeEndDate</name>
+        <function-class>org.hierax.ifdl.tags.estimate.EstimateSort</function-class>
+        <function-signature>java.util.List sortByHopeEndDate(java.util.List)</function-signature>
+    </function>
+
+</taglib>

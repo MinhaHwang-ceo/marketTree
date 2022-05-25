@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<!-- 다른 mapper와 중복되지 않도록 네임스페이스 기재 -->
+<mapper namespace="com.gloryDuck.marketTree.model.mappers.MemberMapper">
+	
+	<update id="failCntUpdate" parameterType="String"  >
+		UPDATE GPIS_USER 
+		SET PW_WRONG_CNT = isnull(PW_WRONG_CNT, 0)+1
+		WHERE USER_ID = #{userId}
+	</update>
+	
+	<update id="failEnabled" parameterType="String"  >
+		UPDATE GPIS_USER 
+		SET ISENABLED = (CASE WHEN PW_WRONG_CNT > 4 THEN 0 ELSE 1 END) 
+		WHERE USER_ID = #{userId}
+	</update>
+	
+	<select id="getIsEnable" parameterType="String" resultType="com.gloryDuck.marketTree.model.vo.MemberEntity">
+		SELECT ISENABLED FROM GPIS_USER
+		WHERE USER_ID = #{userId}
+	</select>
+	
+	<select id="getFailCnt" parameterType="String" resultType="int">
+		SELECT PW_WRONG_CNT FROM GPIS_USER
+		WHERE USER_ID = #{userId}
+	</select>
+	
+	<update id="changeEnabled" parameterType="String" >
+		UPDATE GPIS_USER 
+		SET ISENABLED = (CASE ISENABLED WHEN 0 THEN 1 ELSE 1 END) ,
+		PW_WRONG_CNT = (CASE PW_WRONG_CNT WHEN 0 THEN 0 ELSE 0 END)
+		WHERE USER_ID = #{userId}
+	</update>
+	
+	<select id="getIsUser" parameterType="String" resultType="boolean">
+		SELECT count(USER_ID) as USER_ID FROM GPIS_USER 
+		WHERE USER_ID = #{userId}
+	</select>
+	
+	<select id="getPhone" parameterType="String" resultType="boolean">
+		SELECT count(USER_ID) as USER_ID FROM GPIS_USER 
+		WHERE (TEL_NO = #{phone} or CELL_NO = #{phone2}) and SNS_ONLY != 'Y'
+	</select>
+		
+	<select id="getIsSnsUser" parameterType="String" resultType="boolean">
+		SELECT count(USER_ID) as USER_ID FROM GPIS_USER 
+		WHERE USER_ID = #{userId} 
+			  and (SNS_LOGIN_KAKAO = 'Y' or SNS_LOGIN_NAVER = 'Y')
+			  and SNS_ONLY = 'Y'
+	</select>
+	
+	<select id="getIsLinkedUser" parameterType="String" resultType="boolean">
+		SELECT count(USER_ID) as USER_ID FROM GPIS_USER 
+		WHERE (CHANGE_USER_ID = #{userId} or USER_ID = #{userId})
+			  and (SNS_LOGIN_KAKAO = 'Y' or SNS_LOGIN_NAVER = 'Y')
+			  and SNS_ONLY = 'N'
+	</select>
+	
+	<select id="getIsSaveSnsNaver" parameterType="String" resultType="boolean">
+		SELECT count(USER_ID) as USER_ID FROM GPIS_USER 
+		WHERE USER_ID = #{userId} and SNS_LOGIN_NAVER = 'Y'
+	</select>
+	
+	<select id="getIsSaveSnsKakao" parameterType="String" resultType="boolean">
+		SELECT count(USER_ID) as USER_ID FROM GPIS_USER 
+		WHERE USER_ID = #{userId} and SNS_LOGIN_KAKAO = 'Y'
+	</select>
+	
+	<update id="lastLogin" parameterType="String">
+		UPDATE GPIS_USER 
+		SET LAST_LOGIN_DATE = #{lastLogin}
+		WHERE USER_ID = #{userId}
+	</update>
+	
+	<update id="updateMyPass" parameterType="String">
+		UPDATE GPIS_USER 
+		SET PASSWORD = #{pw}
+		WHERE USER_ID = #{uid}
+	</update>
+	
+	<select id="uploadSellerFiles" parameterType="hashMap" resultType="int">
+		/* 견적 파일 저장 */
+		INSERT INTO GPIS_SELLER_UPLOAD (
+		
+			SELLER_CODE		,
+			UPLOADER		,
+			FILE_NAME		,
+			FILE_PATH		,
+			FILE_SIZE		,
+			UPLOAD_DATE
+		
+		) VALUES (
+
+			#{sellerCode}	,
+			#{uploader}		,
+			#{fileName}		,
+			#{filePath}		,
+			#{fileSize}		,
+			#{uploadDate}
+		
+		)
+		
+		SELECT @@IDENTITY AS SEQ
+	</select>
+	
+	
+</mapper>

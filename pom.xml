@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.5.6</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.gloryDuck</groupId>
+	<artifactId>MarketTree</artifactId>
+	<version>0.0.1</version>
+	<packaging>war</packaging>
+	<name>MarketTree</name>
+	<description>MarketTree for Buyer</description>
+	<properties>
+		<java.version>11</java.version>
+		<tomcat.version>9.0.62</tomcat.version>
+	</properties>
+	
+	<!-- 외부 jar 사용을 위한 세팅 -->
+	<repositories>
+		<repository>
+		    <id>local-repository</id> 
+		    <name>local repository</name> 
+		    <url>file://${project.basedir}/lib</url>
+		</repository>
+	</repositories>
+	
+	<dependencies>
+
+		<!-- session redis 사용을 위한 추가 -->
+		  <!-- <dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-data-redis</artifactId>
+		    <version>2.6.1</version>
+		  </dependency> -->
+ 		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
+		<!-- <dependency>
+		    <groupId>org.springframework.session</groupId>
+		    <artifactId>spring-session-data-redis</artifactId>
+		    <version>2.6.1</version>
+		  </dependency> -->
+		 <!-- session redis 사용을 위한 추가 끝 -->
+        
+        
+        <!-- spring security -->
+        
+       <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-jni -->
+		<dependency>
+		    <groupId>org.apache.tomcat</groupId>
+		    <artifactId>tomcat-jni</artifactId>
+		    <version>${tomcat.version}</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore-nio -->
+		<dependency>
+		    <groupId>org.apache.httpcomponents</groupId>
+		    <artifactId>httpcore-nio</artifactId>
+		    <version>4.4.5</version>
+		</dependency>
+		
+        
+        
+         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        
+        <dependency> 
+      	 	<groupId>org.springframework.security</groupId> 
+    	    <artifactId>spring-security-taglibs</artifactId> 
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        		
+        <!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
+		<dependency>
+		    <groupId>com.microsoft.sqlserver</groupId>
+		    <artifactId>mssql-jdbc</artifactId>
+		    <version>9.2.1.jre11</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.zaxxer</groupId>
+		    <artifactId>HikariCP</artifactId>
+		</dependency>
+	
+		<!-- Google reCAPTCHA -->
+		<dependency>
+			<groupId>net.tanesha.recaptcha4j</groupId>
+		    <artifactId>recaptcha4j</artifactId>
+		    <version>0.0.7</version>
+		</dependency>
+		
+		<!-- 구글 리캡챠 사용하기 위한 json -->
+		<dependency>
+		    <groupId>javax.json</groupId>
+		    <artifactId>javax.json-api</artifactId>
+		    <version>1.1.2</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.glassfish</groupId>
+		    <artifactId>javax.json</artifactId>
+		    <version>1.1</version>
+		</dependency>
+				
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-oauth2-client -->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-oauth2-client</artifactId>
+		    <version>2.5.6</version>
+		</dependency>
+		
+		<!-- naver -->
+		<dependency>
+		    <groupId>com.github.scribejava</groupId>
+		    <artifactId>scribejava-core</artifactId>
+		    <version>2.8.1</version>
+		</dependency>
+
+		<!-- 스프링부트가 자동으로 지원하는 템플릿 엔진 ->> JSP를 권장하지 않고 지원하지 않기 때문에 자동으로 들어있다 -->
+		<!-- <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency> -->
+        
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-cache</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- db setting -->
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>2.2.0</version>
+		</dependency>
+				
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+  			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+		    <artifactId>mssql-jdbc</artifactId>
+		 </dependency>
+		 
+		<!-- 톰캣 컨테이너 의존성 -->
+    	<dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-catalina</artifactId>
+            <version>${tomcat.version}</version>
+        </dependency>
+		 
+		 		<!-- 아래는 톰캣에 컨테이너 대한 의존성들 -->
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-core</artifactId>
+            <version>${tomcat.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+            <version>${tomcat.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-jasper</artifactId>
+            <version>${tomcat.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-jasper-el</artifactId>
+            <version>${tomcat.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-jsp-api</artifactId>
+            <version>${tomcat.version}</version>
+        </dependency>
+        
+        <!-- 톰캣 클러스터링을 위한 추가 -->
+        <dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-catalina-ha</artifactId>
+			<version>${tomcat.version}</version>
+		</dependency>
+
+		
+		<!-- SLF4J, logback -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.25</version>
+		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.2.3</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>org.slf4j</groupId>
+		  <artifactId>jcl-over-slf4j</artifactId>
+		  <version>1.7.25</version>
+		</dependency>
+						
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+		<dependency>
+		    <groupId>org.apache.logging.log4j</groupId>
+		    <artifactId>log4j-core</artifactId>
+		    <version>2.16.0</version>
+		</dependency>
+
+		 <!-- BasicDataSource -->
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.bgee.log4jdbc-log4j2</groupId>
+		    <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
+		    <version>1.16</version>
+		</dependency>
+		 
+		
+		<!--        thymeleaf에서 Security 명령어를 사용하기 위해 포함-->
+        <dependency>
+            <groupId>org.thymeleaf.extras</groupId>
+            <artifactId>thymeleaf-extras-springsecurity5</artifactId>
+        </dependency>
+
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>2.0.1.Final</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.hibernate.validator</groupId>
+		    <artifactId>hibernate-validator</artifactId>
+		    <version>6.0.7.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.20</version>
+			<scope>provided</scope>
+		</dependency>
+				
+		<!-- @Inject -->
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>1</version>
+		</dependency>
+				
+		<dependency> 
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+		
+				
+		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+		<dependency>
+		    <groupId>com.google.code.gson</groupId>
+		    <artifactId>gson</artifactId>
+		    <version>2.8.5</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/net.sf.ehcache/ehcache -->
+		<dependency>
+		    <groupId>net.sf.ehcache</groupId>
+		    <artifactId>ehcache</artifactId>
+		    <version>2.10.6</version>
+		</dependency>
+		
+		<!-- jpa 에서 쿼리를 사용하기 위하여 추가 -->
+		<dependency>
+			<groupId>com.querydsl</groupId>
+			<artifactId>querydsl-apt</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.querydsl</groupId>
+			<artifactId>querydsl-jpa</artifactId>
+		</dependency>
+		
+		<!--  파일 업로드 관련 -->
+		<dependency>
+		    <groupId>commons-io</groupId>
+		    <artifactId>commons-io</artifactId>
+		    <version>2.4</version>
+		</dependency>
+				
+		<dependency>
+		    <groupId>commons-fileupload</groupId>
+		    <artifactId>commons-fileupload</artifactId>
+		    <version>1.3.3</version>
+		</dependency>
+		
+		<!--  EXCEL 관련 -->
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi-ooxml</artifactId>
+		    <version>3.9</version>
+		</dependency>
+		
+		<!--  FTP 파일 업로드 관련 -->
+		<dependency>
+		    <groupId>commons-net</groupId>
+		    <artifactId>commons-net</artifactId>
+		    <version>3.6</version>
+		</dependency>
+
+		<!-- 
+		<dependency>
+          	<groupId>org.springframework</groupId>
+          	<artifactId>spring-websocket</artifactId>
+      	</dependency> -->
+      	
+      	<!-- https://mvnrepository.com/artifact/org.springframework/spring-messaging -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-messaging</artifactId>
+		    <version>5.3.14</version>
+		</dependency>
+
+		<!-- 이니시스 jar파일 -->
+		<!-- <dependency>
+		    <groupId>inisis</groupId>
+		    <artifactId>iniPaySample</artifactId>
+		    <version>1.3</version>
+		</dependency> -->
+		
+		<!-- nice API -->
+		<!-- <dependency>
+		    <groupId>nice</groupId>
+		    <artifactId>NiceID</artifactId>
+		    <version>1.1</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>nice</groupId>
+		    <artifactId>NiceID_ibm</artifactId>
+		    <version>1.1</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>nice</groupId>
+		    <artifactId>caCheck</artifactId>
+		    <version>1.0</version>
+		</dependency> -->
+		 
+	</dependencies>
+	
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+			
+			<!-- root-context, servlet-context, web.xml 없다는 플러그인 -->
+			 <!-- 자바로 설정할때 쓸것. -->
+		    <plugin>
+		    	<groupId>org.apache.maven.plugins</groupId>
+		        	<artifactId>maven-war-plugin</artifactId>
+		            <version>3.2.0</version>
+		            <configuration>
+		            	<failOnMissingWebXml>false</failOnMissingWebXml>
+		            </configuration>
+		     </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <configuration>
+                    <mainClass>org.test.int1.Main</mainClass>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.mysema.maven</groupId>
+                <artifactId>apt-maven-plugin</artifactId>
+                <version>1.1.3</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>process</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>target/generated-sources/java</outputDirectory>
+                            <processor>com.querydsl.apt.jpa.JPAAnnotationProcessor</processor>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+		</plugins>
+	</build>
+
+</project>

@@ -1,0 +1,74 @@
+@charset "UTF-8";
+.sot{
+	overflow: auto;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	padding: 0;
+}
+.sot > table{
+	table-layout: fixed;
+	position: relative;
+	border-collapse: separate !important;
+	border-spacing: 0;
+	padding: 0;
+	margin: 0;
+	width:100%;
+	border-width:0px;
+
+}
+
+ .sot > table tbody {
+    overflow-y: visible;
+	overflow-x : visible;
+	
+}
+
+ .sot > table th.__checkbox, td.__checkbox {
+	position: sticky;
+	
+}
+
+.sot-table-width-auto  > table{
+	width:auto !important;
+}
+.sot-table-width-100px  > table{
+	width:100px !important;
+}
+.sot td ,.sot th{
+	border: 1px solid #ccc;
+}
+.sot-top{
+	position: sticky;
+	top:0;
+	z-index: 20;
+	background-color: #fff;
+}
+th.sot-left {
+	position: sticky;
+	left: 0;
+	z-index: 10;
+	background-color: #535454;
+}
+
+td.sot-left {
+	position: sticky;
+	left: 0;
+	z-index: 10;
+	background-color: #fff;
+}
+
+.sot-bottom{
+	position: sticky;
+	bottom:0;
+	z-index: 20;
+	background-color: #fff;
+}
+.sot-right{
+	position: sticky;
+	right: 0;
+	z-index: 10;
+	background-color: #fff;
+}
+
+
+
