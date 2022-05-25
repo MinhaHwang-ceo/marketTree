@@ -448,7 +448,7 @@
 					    		   window.location.href='/signUpEnd';
 					    		   
 					    	   },
-					    	   fail: function(e){
+					    	   fail: function(e){ 
 					    	       //console.log("fail")
 					    	   },
 					    	   error:function(request, status, error){
