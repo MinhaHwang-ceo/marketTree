@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 public @Data class MemberEntity implements Serializable {
-	 
+	  
 	private static final long serialVersionUID = 1L;
 	
 	@Id
