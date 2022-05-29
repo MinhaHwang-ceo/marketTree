@@ -109,8 +109,8 @@ spring.jpa.properties.javax.persistence.query.timeout: 10000
 #spring.datasource.driver-class-name : com.microsoft.sqlserver.jdbc.SQLServerDriver
 spring.datasource.driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
 #spring.datasource.url : jdbc:sqlserver://192.168.146.1:1433;databaseName=GPPLATFORM;
-spring.datasource.url : jdbc:log4jdbc:sqlserver://172.19.246.255:1433;databaseName=MarketTree;rewriteBatchedStatements=true;
-spring.datasource.username : master
+spring.datasource.url : jdbc:log4jdbc:sqlserver://112.148.204.230:1433;databaseName=SM;rewriteBatchedStatements=true;
+spring.datasource.username : sa
 spring.datasource.password : rmffhfl!@#45
 
 # ===================================================================
