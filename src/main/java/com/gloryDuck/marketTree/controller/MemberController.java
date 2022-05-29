@@ -669,10 +669,10 @@ public class MemberController {
         return msg;
     }
     
-    //기존회원
+    //기존회원 
     @RequestMapping("/linkedMyData")
     @ResponseBody
-    @Transactional
+    @Transactional 
     public String linkedMyData(@RequestParam HashMap<String,String> data) {
 
    	 	Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -685,7 +685,7 @@ public class MemberController {
         }else{
         	
         	name = principal;
-        	String onlyParam = data.get("onlyParam");
+        	String onlyParam = data.get("onlyParam"); 
         	JPAQueryFactory jpaQueryFactory = new JPAQueryFactory(em);
          	QMemberEntity AlreadyMember = QMemberEntity.memberEntity;
          	
