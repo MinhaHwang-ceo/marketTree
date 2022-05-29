@@ -667,7 +667,7 @@ public class MemberController {
         System.out.println(isUser + ", "+ msg);
         
         return msg;
-    }
+    } 
     
     //기존회원 
     @RequestMapping("/linkedMyData")
